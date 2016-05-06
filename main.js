@@ -21,7 +21,7 @@ app.on('ready', function() {
 	// RPC to handle events from the page.
 	electron.ipcMain.on('asynchronous-message', function(event, arg){
 		if (arg.title) {
-			currentSong = arg
+			currentSong = arg;
 			appIcon.setToolTip(currentSong.title + ' by ' + currentSong.artist)
 		}
 	});
@@ -68,14 +68,14 @@ app.on('ready', function() {
 
 	mainWindow.on('blur', function () {
 		mainWindow.hide()
-	})
+	});
 
 	// Set up media keys
 	globalShortcut.register('MediaPlayPause', function () {
 		mainWindow.webContents.executeJavaScript('Play();')
-	})
+	});
 	globalShortcut.register('MediaNextTrack', function () {
 		mainWindow.webContents.executeJavaScript('Next();')
-	})
-
-})
+	});
+});
+app.dock.hide();
