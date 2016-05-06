@@ -53,7 +53,7 @@ app.on('ready', function() {
 		height: 600,
 		webPreferences: {
 			plugins: true,
-			// nodeIntegration on the pare are break jquery do everything in a preload
+			// nodeIntegration breaks jquery.  We can do everything in a preload (which still has access to node)
 			nodeIntegration: false,
 			preload: path.join(__dirname, 'pandora_preload.js')
 		},
@@ -65,7 +65,7 @@ app.on('ready', function() {
 	mainWindow.loadURL('http://pandora.com/', {
 		userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36'
 	});
-	
+
 	mainWindow.on('blur', function () {
 		mainWindow.hide()
 	})
