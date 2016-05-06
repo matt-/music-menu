@@ -1,0 +1,19 @@
+{
+  "name": "music-menu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "build": "electron-packager . MenuMusic --platform=darwin --arch=x64"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron-positioner": "^2.0.3"
+  },
+  "devDependencies": {
+    "electron-packager": "^7.0.1",
+    "electron-prebuilt": "^0.37.8"
+  }
+}
