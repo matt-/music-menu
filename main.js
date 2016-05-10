@@ -174,7 +174,11 @@ app.on('ready', function() {
 		mainWindow.webContents.executeJavaScript('Next();')
 	});
 	globalShortcut.register('Cmd+Ctrl+m', function() {
-		mainWindow.show();
+		if (mainWindow.isVisible()) {
+			mainWindow.hide()
+		} else {
+			mainWindow.show()
+		}
 	});
 });
 
