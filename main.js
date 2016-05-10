@@ -173,6 +173,9 @@ app.on('ready', function() {
 	globalShortcut.register('MediaNextTrack', function () {
 		mainWindow.webContents.executeJavaScript('Next();')
 	});
+	globalShortcut.register('Cmd+Ctrl+m', function() {
+		mainWindow.show();
+	});
 });
 
 app.on('activate', function(){
@@ -189,9 +192,7 @@ if(!showDock){
 
 function showService(service){
 	global.sharedObject.currentService = service;
-
 	storage.set("currentService", service.id);
-
 	mainWindow.show();
 	mainWindow.loadURL(service.url);
 }
