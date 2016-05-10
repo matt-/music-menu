@@ -43,7 +43,7 @@ app.commandLine.appendSwitch('ppapi-flash-path', path.join(__dirname, '/PepperFl
 
 app.on('ready', function() {
 	// Menubar icon
-	var appIcon = new Tray(path.join(__dirname, 'headphones-with-music-note.png'));
+	var appIcon = new Tray(path.join(__dirname, 'headphones-with-music-noteTemplate.png'));
 
 	// RPC to handle events from the page.
 	electron.ipcMain.on('asynchronous-message', function(event, arg){
