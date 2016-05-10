@@ -1,0 +1,52 @@
+[
+  {
+    "id": "pandora",
+    "name": "Pandora",
+    "url": "http://pandora.com/",
+    "selectors": {
+      "drag": "#brandingBar",
+      "is_playing": "div.playButton[style*='display: none']",
+      "play": "div.playButton > a",
+      "pause": "div.pauseButton > a",
+      "next": "div.skipButton > a",
+      "track": {
+        "title": ".playerBarSong",
+        "artist": ".playerBarArtist",
+        "album": ".playerBarAlbum",
+        "art": ".playerBarArt"
+      }
+    }
+  },
+  {
+    "id": "google_music",
+    "name": "Google Music",
+    "url": "https://play.google.com/music/listen",
+    "selectors": {
+      "drag": "paper-toolbar",
+      "is_playing": "#player-bar-play-pause.playing",
+      "play": "#player-bar-play-pause",
+      "next": "#player-bar-forward",
+      "track": {
+        "title": "#currently-playing-title",
+        "artist": "#player-artist",
+        "album": ".player-album",
+        "art": "#playerBarArt"
+      }
+    }
+  },
+  {
+    "id": "soundcloud",
+    "name": "SoundCloud",
+    "url": "https://soundcloud.com/stream",
+    "selectors": {
+      "drag": "header",
+      "is_playing": ".playControl.playing",
+      "play": ".playControl",
+      "next": "button.skipControl.skipControl__next",
+      "track": {
+        "title": "a.playbackSoundBadge__title.sc-truncate > span:nth-child(2)",
+        "art": ".playControls .image span"
+      }
+    }
+  }
+]
